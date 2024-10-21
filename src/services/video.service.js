@@ -1,6 +1,4 @@
-class VideoRepository {
-  constructor() {}
-
+class VideoService {
   async getAllVideos() {}
   async getVideoById() {}
   async createVideo() {}

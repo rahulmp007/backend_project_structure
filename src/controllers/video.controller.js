@@ -1,6 +1,4 @@
-class VideoRepository {
-  constructor() {}
-
+class VideoController {
   async getAllVideos() {}
   async getVideoById() {}
   async createVideo() {}
@@ -8,3 +6,6 @@ class VideoRepository {
   async deleteVideo() {}
   async deleteAllVideos() {}
 }
+
+
+module.exports = new VideoController();

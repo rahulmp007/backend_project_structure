@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const logger = require("../logger");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const videoRoute = require("./routes/video.routes");
 
 const app = express();
 
@@ -29,6 +30,6 @@ app.use(
   })
 );
 
-
+app.use("/api/v1/video", videoRoute);
 
 module.exports = app;
