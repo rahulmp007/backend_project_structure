@@ -5,7 +5,8 @@ const logger = require("../logger");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const videoRoute = require("./routes/video.routes");
-
+const userRoute = require("./routes/user.routes");
+const errorHandler = require("./utils/error_handler");
 const app = express();
 
 app.use(bodyParser.json());
@@ -30,6 +31,11 @@ app.use(
   })
 );
 
+
 app.use("/api/v1/video", videoRoute);
+app.use("/api/v1/user", userRoute);
+
+app.use(errorHandler);
+
 
 module.exports = app;
